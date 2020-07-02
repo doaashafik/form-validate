@@ -1,5 +1,5 @@
 {
-  "name": "sakurai_form_validate",
+  "name": "fv-form-validation",
   "version": "1.0.0",
   "description": "form-validate with javascript",
   "main": "API/index.js",

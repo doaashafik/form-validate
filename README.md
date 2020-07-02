@@ -1,14 +1,11 @@
-# SAKURAI-FORM-VALIDATE
+# FV-Form-Validate
 
-Form Validate is a template-based validation, was created with javascript. User Can validate input and got streams of data that detect the validation.
+form-validate is a library that allows you to validate inputs and return streams of data that detect the validation.
 
 ### INSTALATION
-
-**npm**
-`npm i sakurai-form-validate`
-
+`npm i fv-form-validate`
+[_npm package_](https://www.npmjs.com/package/fv-form-validation)
 ### API
-
 #### Schema
 
 With **Validate** Object user can handle all stuff validation
@@ -66,8 +63,8 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate from 'sakurai-form-validate/API/Schema/index.js';
-import { FormValidate } from 'sakurai-form-validate/API/index.js';
+import Validate from 'fv-form-validate/API/Schema/index.js';
+import { FormValidate } from 'fv-form-validate/API/index.js';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),
