@@ -1,13 +1,13 @@
 # FORM VALIDATE
 
-Form Validate is a template-based validation was built with javascript, User Can validate input and got streams of data that detect the validation.
+Form Validate is a template-based validation, was created with javascript. User Can validate input and got streams of data that detect the validation.
 
-## INSTALATION
+### INSTALATION
 
 **npm**
 `npm i form-validate`
 
-## API
+### API
 
 #### Schema
 
@@ -22,11 +22,10 @@ Validator | Description
 | |object validator has **keys** function
 | |that wrap all validation
 |StringValidator | **Validate.string**
-| |validate number with **min** & **max**
+| |validate string with **min** & **max**
 | | validate any type of string with **type** method
-| | **color** - **email** - **date** - **text**
-| | **url** - **image** and for special pattern you can use
-| | **pattern** method
+| | **color** - **email** - **date** - **text** - **url** - **image** 
+| | for special pattern you can use **pattern** method
 | | _Example: Validate.string.type('email')_
 | | _Example: Validate.string.pattern(`/^([^.]+)/`)_
 |ArrayValidator | validate input array with **contains** method
@@ -38,15 +37,15 @@ Validator | Description
 
 #### Events
 
-after you handle schema you can access these events to handle more stuff
+after you handle schema, you can access these events to handle more stuff
 when user input or on submit event
 Event | Description
 ------------ | -------------
 onValues | got a stream of form values
 onMessages | this event will emit **success - error** messages depend on the validation
-onSubmit | will send object that contains **isValidating - isSubmiting - errors if found Form Values**
+onSubmit | will send object that contains **isValidating - isSubmiting - errors if found  - Form Values**
 
-**Access Events**
+#### Access Events 
 `const formEvents = FormValidate("validate_form_api", Validation);`
 
 ```javascript
@@ -61,13 +60,13 @@ formEvents.onMessages(function(messages) {
 });
 ```
 
-### USAGE
+#### USAGE
 
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate, { FormValidate } from 'validate';
-
+import Validate from 'form-validate/API/Schema/index.js'
+import { FormValidate } from 'form-validate/API/index.js';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),
@@ -87,7 +86,7 @@ const Validation = {
 const formEvents = FormValidate('validate_form_api', Validation);
 ```
 
-### EXAMPLES
+#### EXAMPLES
 
 **Simple Filed**
 
@@ -120,7 +119,7 @@ Validate.object.keys({
 });
 ```
 
-**Validate array boolean - number - string**
+**Validate array  of boolean/number/string fields**
 
 ```javascript
 <select name="cars" multiple>

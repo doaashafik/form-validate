@@ -1,4 +1,4 @@
-import { NumberValidator } from "../../API/Schema/Validators/index.js";
+import { NumberValidator } from '../../API/Schema/Validators/index.js';
 const mock = [
   { value: undefined, field: NumberValidator().required() },
   { value: '', field: NumberValidator().required() },
@@ -13,10 +13,10 @@ const mock = [
 ];
 const checker = mock.map(({ field, value }) => field.rule(value));
 
-test("Test Number", () => {
-  expect(checker[0]).toBe("invalid");
-  expect(checker[1]).toBe("invalid");
-  expect(checker[2]).toBe("valid");
-  expect(checker[3]).toBe("invalid");
-  expect(checker[4]).toBe("valid");
+test('Test Number', () => {
+  expect(checker[0]).toBe('invalid');
+  expect(checker[1]).toBe('invalid');
+  expect(checker[2]).toBe('valid');
+  expect(checker[3]).toBe('invalid');
+  expect(checker[4]).toBe('valid');
 });
