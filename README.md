@@ -24,7 +24,7 @@ Validator | Description
 |StringValidator | **Validate.string**
 | |validate string with **min** & **max**
 | | validate any type of string with **type** method
-| | **color** - **email** - **date** - **text** - **url** - **image** 
+| | **color** - **email** - **date** - **text** - **url** - **image**
 | | for special pattern you can use **pattern** method
 | | _Example: Validate.string.type('email')_
 | | _Example: Validate.string.pattern(`/^([^.]+)/`)_
@@ -43,9 +43,10 @@ Event | Description
 ------------ | -------------
 onValues | got a stream of form values
 onMessages | this event will emit **success - error** messages depend on the validation
-onSubmit | will send object that contains **isValidating - isSubmiting - errors if found  - Form Values**
+onSubmit | will send object that contains **isValidating - isSubmiting - errors if found - Form Values**
 
-#### Access Events 
+#### Access Events
+
 `const formEvents = FormValidate("validate_form_api", Validation);`
 
 ```javascript
@@ -65,7 +66,7 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate from 'form-validate/API/Schema/index.js'
+import Validate from 'form-validate/API/Schema/index.js';
 import { FormValidate } from 'form-validate/API/index.js';
 const Validation = {
   schema: Validate.object.keys({
@@ -119,7 +120,7 @@ Validate.object.keys({
 });
 ```
 
-**Validate array  of boolean/number/string fields**
+**Validate array of boolean/number/string fields**
 
 ```javascript
 <select name="cars" multiple>
