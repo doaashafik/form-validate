@@ -1,5 +1,5 @@
 {
-  "name": "fv-form-validation",
+  "name": "vf-form-validation",
   "version": "1.0.0",
   "description": "form-validate with javascript",
   "main": "API/index.js",
@@ -16,6 +16,10 @@
     "object",
     "inputs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doaashafik/fv-form-validate.git"
+  },
   "author": "doaaShafik https://linkedin.com/in/doaashafik",
   "license": "MIT",
   "devDependencies": {

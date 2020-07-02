@@ -1,10 +1,9 @@
-# FV-Form-Validate
+# VF-Form-Validate
 
 form-validate is a library that allows you to validate inputs and return streams of data that detect the validation.
 
 ### INSTALATION
-`npm i fv-form-validate`
-[_npm package_](https://www.npmjs.com/package/fv-form-validation)
+`npm i vf-form-validate`
 ### API
 #### Schema
 
@@ -63,8 +62,8 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate from 'fv-form-validate/API/Schema/index.js';
-import { FormValidate } from 'fv-form-validate/API/index.js';
+import Validate from 'vf-form-validate/API/Schema/index.js';
+import { FormValidate } from 'vf-form-validate/API/index.js';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),
