@@ -47,5 +47,5 @@ export function schemaHandler() {
   return EventStream;
 }
 
-const Validate = Object.create(SchemaValidators);
-export default Validate;
+export const Validate = Object.create(SchemaValidators);
+
