@@ -1,5 +1,5 @@
 {
-  "name": "form-validate",
+  "name": "sakurai_form_validate",
   "version": "1.0.0",
   "description": "form-validate with javascript",
   "main": "API/index.js",
