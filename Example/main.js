@@ -1,5 +1,4 @@
-import Validate from '../API/Schema/index.js';
-import { FormValidate } from '../API/index.js';
+import { Validate, FormValidate } from '../API/index.js';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),

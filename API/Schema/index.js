@@ -48,4 +48,3 @@ export function schemaHandler() {
 }
 
 export const Validate = Object.create(SchemaValidators);
-
