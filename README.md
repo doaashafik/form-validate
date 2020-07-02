@@ -47,17 +47,17 @@ onMessages | this event will emit **success - error** messages depend on the val
 onSubmit | will send object that contains **isValidating - isSubmiting - errors if found Form Values**
 
 **Access Events**
-```const formEvents = FormValidate("validate_form_api", Validation);```
+`const formEvents = FormValidate("validate_form_api", Validation);`
 
 ```javascript
 formEvents.onSubmit(function(submit) {
-  console.log(submit, "onSubmit");
+  console.log(submit, 'onSubmit');
 });
 formEvents.onValues(function(values) {
-  console.log(values, "onValues");
+  console.log(values, 'onValues');
 });
 formEvents.onMessages(function(messages) {
-  console.log(messages, "onMessages");
+  console.log(messages, 'onMessages');
 });
 ```
 
@@ -66,25 +66,25 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate, { FormValidate } from "validate";
+import Validate, { FormValidate } from 'validate';
 
 const Validation = {
   schema: Validate.object.keys({
-    email: Validate.string.type("email"),
+    email: Validate.string.type('email'),
     phone: Validate.number.required()
   }),
   messages: {
     email: {
-      success: "email is valid",
-      error: "email not valid"
+      success: 'email is valid',
+      error: 'email not valid'
     },
     phone: {
-      error: "phone number not correct",
-      success: "phone is correct"
+      error: 'phone number not correct',
+      success: 'phone is correct'
     }
   }
 };
-const formEvents = FormValidate("validate_form_api", Validation);
+const formEvents = FormValidate('validate_form_api', Validation);
 ```
 
 ### EXAMPLES

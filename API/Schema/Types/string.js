@@ -1,5 +1,5 @@
-import { IMAGE, COLOR, URL, TEXT, EMAIL } from "../Patterns/index.js";
-import { isValueTruth, isRequired } from "../helpers/index.js";
+import { IMAGE, COLOR, URL, TEXT, EMAIL } from '../Patterns/index.js';
+import { isValueTruth, isRequired } from '../helpers/index.js';
 
 export const URL_CHECK = input => {
   return RegExp(URL).test(input);
@@ -8,7 +8,10 @@ export const URL_CHECK = input => {
 export const CHECK_WITH_PATTERN = function(pattern, value) {
   return RegExp(pattern).test(value);
 };
-export function checkByType(validator = "string", {field, value, pattern, rules }) {
+export function checkByType(
+  validator = 'string',
+  { field, value, pattern, rules }
+) {
   return {
     required: isRequired.bind(field, value),
     url: URL_CHECK.bind(field, value),
@@ -22,9 +25,9 @@ export function checkByType(validator = "string", {field, value, pattern, rules 
   }[validator]();
 }
 
-export const TEXT_CHECK = ( input, options) => {
+export const TEXT_CHECK = (input, options) => {
   let valid = [];
-  valid.push(typeof input === "string");
+  valid.push(typeof input === 'string');
 
   if (options.min) {
     valid.push(input.length >= options.min);
@@ -43,7 +46,7 @@ export const EMAIL_CHECK = input => {
 export const DATE_CHECK = (input, { min = undefined, max = undefined }) => {
   const date = new Date(input);
   let valid = [];
-  valid.push(!isNaN(Date.parse(input)))
+  valid.push(!isNaN(Date.parse(input)));
 
   if (min) {
     const minDate = new Date(min);
@@ -62,7 +65,7 @@ export const COLOR_CHECK = input => {
 };
 
 export const PASSWORD_CHECK = input => {
-  return "password";
+  return 'password';
 };
 
 export const IMAGE_CHECK = input => {

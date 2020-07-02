@@ -1,6 +1,6 @@
-import { delegation } from "../index.js";
-import { ValidateMessage, isValueValid } from "../helpers/index.js";
-import { checkByFieldType } from "../Types/array.js";
+import { delegation } from '../index.js';
+import { ValidateMessage, isValueValid } from '../helpers/index.js';
+import { checkByFieldType } from '../Types/array.js';
 const ArrayValidator = function() {
   return Object.setPrototypeOf(
     {
@@ -14,7 +14,7 @@ const ArrayValidator = function() {
           return checkByFieldType({
             values,
             field
-          })
+          });
         } else {
           return ValidateMessage(false);
         }
