@@ -1,10 +1,17 @@
 # VE-Form-Validate
 
-form-validate is a library that allows you to validate inputs and return streams of data that detect the validation.
+ve-form-validate is a javascript library that allows you to validate inputs and return streams of data that detect the validation.
 
 ### INSTALATION
 
+**npm**
+
 `npm i ve-form-validate`
+
+
+**CDN**
+
+`ve-form-validation is available on CDN:` [jsdelivr](https://cdn.jsdelivr.net/npm/ve-form-validation@latest/dist/form-validate.js)
 
 ### API
 
@@ -136,6 +143,7 @@ Validate.object.keys({
 ### TODO
 
 - _Localization_
+- server side rendering
 - _Validate arr of objects_
 
 ### LICENCE
