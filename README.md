@@ -1,10 +1,13 @@
-# VF-Form-Validate
+# VI-Form-Validate
 
 form-validate is a library that allows you to validate inputs and return streams of data that detect the validation.
 
 ### INSTALATION
-`npm i vf-form-validate`
+
+`npm i vi-form-validate`
+
 ### API
+
 #### Schema
 
 With **Validate** Object user can handle all stuff validation
@@ -62,8 +65,8 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate from 'vf-form-validate/API/Schema/index.js';
-import { FormValidate } from 'vf-form-validate/API/index.js';
+import Validate from 'vi-form-validate/API/Schema/index.js';
+import { FormValidate } from 'vi-form-validate/API/index.js';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),
@@ -133,8 +136,8 @@ Validate.object.keys({
 
 ### TODO
 
-_Localization_
-_Validate arr of objects_
+- _Localization_
+- _Validate arr of objects_
 
 ### LICENCE
 

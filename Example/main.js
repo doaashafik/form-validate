@@ -1,14 +1,13 @@
-import { Validate, FormValidate } from '../API/index.js';
 const Validation = {
-  schema: Validate.object.keys({
-    email: Validate.string.type('email'),
-    cars: Validate.array.contains(Validate.string),
-    person: Validate.object.keys({
-      firstName: Validate.string,
-      lastName: Validate.string,
-      age: Validate.number
+  schema: _.Validate.object.keys({
+    email: _.Validate.string.type('email'),
+    cars: _.Validate.array.contains(_.Validate.string),
+    person: _.Validate.object.keys({
+      firstName: _.Validate.string,
+      lastName: _.Validate.string,
+      age: _.Validate.number
     }),
-    phone: Validate.number
+    phone: _.Validate.number
       .required()
       .minLength(3)
       .maxLength(20)
@@ -18,7 +17,7 @@ const Validation = {
     phone: { error: 'phone number not correct', success: 'phone is correct' }
   }
 };
-const formEvents = FormValidate('validate_form_api', Validation);
+const formEvents = _.FormValidate('validate_form_api', Validation);
 
 formEvents.onSubmit(function(e) {
   console.log(e, 'onSubmit');

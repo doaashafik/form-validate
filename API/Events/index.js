@@ -11,12 +11,12 @@ export const fromEvents = function(event) {
 };
 
 export const Binder = function(binder, event) {
+  onValue();
   if (event === 'input') {
     EventStream.subscirbeMessages = binder;
     EventStream.subscirbeValues = binder;
 
     binder(function(e) {
-      onValue();
       EventStream.validate = handleValidation(getField(getTarget(e.target)));
     });
   }
@@ -24,7 +24,6 @@ export const Binder = function(binder, event) {
     EventStream.submit = binder;
 
     binder(function(e) {
-      onValue();
       const { schema } = EventStream.form;
       e.preventDefault();
       Object.keys(schema).forEach(name => {
@@ -33,7 +32,6 @@ export const Binder = function(binder, event) {
     });
   }
   if (event === 'DOMContentLoaded') {
-    onValue();
     schemaHandler();
   }
   return EventStream;
