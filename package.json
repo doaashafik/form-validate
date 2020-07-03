@@ -1,5 +1,5 @@
 {
-  "name": "vi-form-validation",
+  "name": "ve-form-validation",
   "version": "1.0.0",
   "description": "form-validate with javascript",
   "main": "dist/form-validate.js",

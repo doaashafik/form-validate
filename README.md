@@ -1,10 +1,10 @@
-# VI-Form-Validate
+# VE-Form-Validate
 
 form-validate is a library that allows you to validate inputs and return streams of data that detect the validation.
 
 ### INSTALATION
 
-`npm i vi-form-validate`
+`npm i ve-form-validate`
 
 ### API
 
@@ -65,8 +65,7 @@ formEvents.onMessages(function(messages) {
 **you will send validation object to `FormValidate` Method with form className**
 
 ```javascript
-import Validate from 'vi-form-validate/API/Schema/index.js';
-import { FormValidate } from 'vi-form-validate/API/index.js';
+import { FormValidate, Validate } from 've-form-validate';
 const Validation = {
   schema: Validate.object.keys({
     email: Validate.string.type('email'),
